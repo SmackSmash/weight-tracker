@@ -5,6 +5,6 @@
 
 @layer base {
   body {
-    @apply flex min-h-screen w-full items-center justify-center bg-[radial-gradient(#303340,#1B1E28)] text-poimandres-lightgrey font-rubik;
+    @apply flex min-h-screen w-full items-center justify-center bg-[radial-gradient(#303340,#1B1E28)] text-poimandres-white font-rubik;
   }
 }
