@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        rubik: ['Rubik', 'Helvetica', 'Arial', 'sans-serif']
+      },
       colors: {
         'poimandres-yellow': '#FFFAC2',
         'poimandres-lightgreen': '#5DE4C7',
