@@ -29,16 +29,21 @@ const options = {
   stacked: false,
   plugins: {
     title: {
-      display: true,
+      display: false,
       color: 'white',
       text: 'Weight Tracker'
+    },
+    legend: {
+      display: false
     }
   },
   scales: {
     y: {
       type: 'linear' as const,
       display: true,
-      position: 'left' as const
+      position: 'left' as const,
+      suggestedMax: 100,
+      suggestedMin: 60
     }
   }
 };
@@ -49,10 +54,10 @@ const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
-      data: [1, 2, 3, 4, 5, 6, 7],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      label: 'Weight (kg)',
+      data: [93, 92, 91, 91, 90, 89, 88],
+      borderColor: '#5DE4C7',
+      backgroundColor: '#5DE4C7',
       yAxisID: 'y'
     }
   ]
@@ -60,7 +65,8 @@ const data = {
 
 const App = () => {
   return (
-    <div>
+    <div className='w-full h-full'>
+      <h1>Weight Tracker</h1>
       <Line options={options} data={data} />
     </div>
   );
